@@ -1,0 +1,23 @@
+version: 4.1.27
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Navigate to the website URL.
+    commands:
+      - command: hover-text
+        text: saucedemo.com
+        description: current URL in the address bar
+        action: click
+      - command: type
+        text: https://example.com
+      - command: press-keys
+        keys:
+          - enter
+  - prompt: >-
+      Assert that the logo is displayed on the homepage.  # Use the content of
+      the file from the environment
+    commands:
+      - command: assert
+        expect: the logo is displayed on the homepage
