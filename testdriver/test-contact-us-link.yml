@@ -1,0 +1,11 @@
+version: 4.1.27
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Find the "Contact Us" link on the homepage.
+    commands:
+      - command: scroll-until-text
+        text: Contact Us
+        direction: down
